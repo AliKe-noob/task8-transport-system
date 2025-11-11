@@ -6,12 +6,16 @@ class Car(Vehicle):
         self.num_doors = num_doors
         self.fuel_type = fuel_type
 
-        def info(self):
-            super().info()
-            print(f"""
-Number of doors: {num_doors}
-fuel_type: {fuel_type}
+    def info(self):
+        super().info()
+        print(f"""
+Number of doors: {self.num_doors}
+fuel_type: {self.fuel_type}
                   """)
+        
+    def honk(self):
+        print("The car made 'Honk!' sound. ")
             
 myCar = Car("Toyota", "Corolla", 2020, 4, "Diezel", max_speed = 150)
 myCar.info()
+myCar.honk()
