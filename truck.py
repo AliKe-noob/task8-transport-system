@@ -8,4 +8,13 @@ class Truck(Vehicle):
 
     def info(self):
         super().info()
+        print(f"""
+cargo_capacity: {self.cargo_capacity}
+num_wheels: {self.num_wheels}
+                  """)
         
+    def load_cargo(self, amount):
+        if amount > self.cargo_capacity:
+            print("Amount exceeds cargo capacity limit. ")
+        else:
+            print(f"Successfully loaded {amount} tons. ")
