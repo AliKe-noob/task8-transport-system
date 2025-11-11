@@ -30,9 +30,20 @@ class Vehicle:
                 self.current_speed = 0
 
 
-    def info(self, speed):
+    def info(self):
         print(f"""
 Brand = {self.brand}
 Model = {self.model}
-
+Year = {self.year}
+current_speed = {self.current_speed}
+max_speed = {self.max_speed}
               """)
+        
+car = Vehicle("Toyota", "Corolla", "2020", max_speed = 150)
+car.info()
+car.start()
+car.accelerate(100)
+car.info()
+car.brake(50)
+car.info()
+car.stop()
