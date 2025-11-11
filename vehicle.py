@@ -17,8 +17,17 @@ class Vehicle:
     def accelerate(self, speed):
         if speed < 0:
             print("Can't accelerate negatively. ")
+        else:
+            self.current_speed += speed
 
-    def brake(self):
+    def brake(self, speed):
+        if speed < 0:
+            print("Cant brake by negative. ")
+        else:
+            self.current_speed -= speed
+            if self.current_speed < 0:
+                self.current_speed = 0
+
 
     def info(self, speed):
         print("")
