@@ -5,3 +5,13 @@ class Car(Vehicle):
         super().__init__(brand, model, year, current_speed, max_speed)
         self.num_doors = num_doors
         self.fuel_type = fuel_type
+
+        def info(self):
+            super().info()
+            print(f"""
+Number of doors: {num_doors}
+fuel_type: {fuel_type}
+                  """)
+            
+myCar = Car("Toyota", "Corolla", 2020, 4, "Diezel", max_speed = 150)
+myCar.info()
