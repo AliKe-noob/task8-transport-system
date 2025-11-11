@@ -15,7 +15,3 @@ fuel_type: {self.fuel_type}
         
     def honk(self):
         print("The car made 'Honk!' sound. ")
-            
-myCar = Car("Toyota", "Corolla", 2020, 4, "Diezel", max_speed = 150)
-myCar.info()
-myCar.honk()

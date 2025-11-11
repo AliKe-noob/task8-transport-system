@@ -1,16 +1,28 @@
 class Vehicle:
-    def __init__(self, brand, model, year, current_speed = 0, max_speed = None):
+
+    """
+    Базовый класс для всех транспортных средств.
+
+    Атрибуты:
+        brand (str): Марка транспортного средства
+        model (str): Модель
+        year (int): Год выпуска
+        _current_speed (int): Текущая скорость (инкапсулирована)
+        max_speed (int): Максимальная скорость
+    """
+
+    def __init__(self, brand, model, year, max_speed = None):
         self.brand = brand
         self.model = model
         self.year = year
-        self.current_speed = current_speed
+        self.__current_speed = 0
         self.max_speed = max_speed
 
     def start(self):
         print("The engine started.")
 
     def stop(self):
-        if self.current_speed == 0:
+        if self.__current_speed == 0:
             print("The engine never started. ")
         else:
             print("The engine stopped. ")
@@ -19,15 +31,15 @@ class Vehicle:
         if speed < 0:
             print("Can't accelerate negatively. ")
         else:
-            self.current_speed += speed
+            self.__current_speed += speed
 
     def brake(self, speed):
         if speed < 0:
             print("Cant brake by negative. ")
         else:
-            self.current_speed -= speed
-            if self.current_speed < 0:
-                self.current_speed = 0
+            self.__current_speed -= speed
+            if self.__current_speed < 0:
+                self.__current_speed = 0
 
 
     def info(self):
@@ -35,7 +47,7 @@ class Vehicle:
 Brand = {self.brand}
 Model = {self.model}
 Year = {self.year}
-current_speed = {self.current_speed}
+current_speed = {self.__current_speed}
 max_speed = {self.max_speed}
               """)
         
