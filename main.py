@@ -13,6 +13,8 @@ for vehicle in vehicles:
     vehicle.start() 
     vehicle.accelerate(60) 
     vehicle.info()
+    vehicle.brake(40)
+    vehicle.info()
     print()
 
     myCar.honk()

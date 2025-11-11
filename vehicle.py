@@ -11,7 +11,7 @@ class Vehicle:
         max_speed (int): Максимальная скорость
     """
 
-    def __init__(self, brand, model, year, max_speed = None):
+    def __init__(self, brand, model, year, current_speed=0, max_speed = None):
         self.brand = brand
         self.model = model
         self.year = year
